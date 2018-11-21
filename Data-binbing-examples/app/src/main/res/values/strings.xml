@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Data Binding Estudo</string>
+    <string name="simple_data_binding_example">Exemplo simples de data binding a partir um objeto usuário</string>
+    <string name="example_listeners_for_click_events">Definição listeners para eventos de click e long click</string>
+    <string name="checkbox_text">Teste com checkbox events</string>
+    <string name="example_data_binding_constant">Recuperando valor a partir de uma constante</string>
+    <string name="example_setting_imageview_content">Exemplo de definição de uma função estática para setar imagem</string>
+    <string name="example_reusing_layouts">Exemplo do uso de inclusão de layout, passando objeto para ele como parâmetro</string>
+    <string name="example_recycler_view_with_data_binding">Exemplo de listagem onde os itens são preenchidos dinâmicamente pelo data binding, reduzingo a quantodade de código escrito.</string>
+    <string name="example_bollean_expression_with_data_binding">Exemplo de avaliação de expressão boleana para exibir texto correto</string>
+</resources>

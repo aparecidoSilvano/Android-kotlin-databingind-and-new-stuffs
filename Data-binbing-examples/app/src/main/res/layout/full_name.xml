@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.example.aparecido.databindingestudo.User" />
+
+        <variable
+            name="userInside"
+            type="User" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#70decb"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@{userInside.fullName()}" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/example_bollean_expression_with_data_binding"
+            style="@style/HeadersTheme" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text='@{userInside.isAdult ? "userInside.isAdult=> É adulto": "userInside.isAdult=> Não é adulto"}' />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text='@{ userInside.age &gt;= 18 ? "userInside.age &gt;= 18 => É adulto" : "userInside.age &gt;= 18 => Não é adulto" }' />
+    </LinearLayout>
+</layout>
