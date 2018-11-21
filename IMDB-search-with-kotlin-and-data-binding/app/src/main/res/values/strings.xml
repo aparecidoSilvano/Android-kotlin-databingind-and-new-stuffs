@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My IMDB Search app</string>
+    <string name="search_hint">Movie name</string>
+    <string name="searchingLabel">Searching…</string>
+    <string name="your_last_movie_search">Your last movie search</string>
+    <string name="movie_not_found">Movie not found</string>
+    <string name="use_the_search">Pesquise por um filme na lupa acima</string>
+</resources>
