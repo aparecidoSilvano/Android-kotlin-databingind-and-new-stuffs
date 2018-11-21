@@ -7,44 +7,44 @@ import com.google.gson.annotations.SerializedName
 class MovieSearch {
     @SerializedName("vote_count")
     @Expose
-    private val voteCount: Int = 0
+    val voteCount: Int = 0
     @SerializedName("id")
     @Expose
-    private val id: Int = 0
+    val id: Int = 0
     @SerializedName("video")
     @Expose
-    private val video: Boolean = false
+    val video: Boolean = false
     @SerializedName("vote_average")
     @Expose
-    private val voteAverage: Double = 0.toDouble()
+    val voteAverage: Double = 0.toDouble()
     @SerializedName("title")
     @Expose
-    private val title: String? = null
+    val title: String? = null
     @SerializedName("popularity")
     @Expose
-    private val popularity: Double = 0.toDouble()
+    val popularity: Double = 0.toDouble()
     @SerializedName("poster_path")
     @Expose
-    private val posterPath: String? = null
+    val posterPath: String? = null
     @SerializedName("original_language")
     @Expose
-    private val originalLanguage: String? = null
+    val originalLanguage: String? = null
     @SerializedName("original_title")
     @Expose
-    private val originalTitle: String? = null
+    val originalTitle: String? = null
     @SerializedName("genre_ids")
     @Expose
-    private val genreIds: List<Int>? = null
+    val genreIds: List<Int>? = null
     @SerializedName("backdrop_path")
     @Expose
-    private val backdropPath: String? = null
+    val backdropPath: String? = null
     @SerializedName("adult")
     @Expose
-    private val adult: Boolean = false
+    val adult: Boolean = false
     @SerializedName("overview")
     @Expose
-    private val overview: String? = null
+    val overview: String? = null
     @SerializedName("release_date")
     @Expose
-    private val releaseDate: String? = null
+    val releaseDate: String? = null
 }
