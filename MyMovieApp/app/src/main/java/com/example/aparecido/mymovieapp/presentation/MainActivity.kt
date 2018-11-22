@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.example.aparecido.mymovieapp.R
+import com.example.aparecido.mymovieapp.data.entries.MovieSearch
 import com.example.aparecido.mymovieapp.domain.MovieListViewModel
 import com.example.aparecido.mymovieapp.presentation.adapter.MoviesAdapter
 import kotlinx.android.synthetic.main.activity_main.*
@@ -22,13 +23,8 @@ class MainActivity : AppCompatActivity() {
         setProgressVisibility(savedInstanceState == null)
 
         moviesViewModel = ViewModelProviders.of(this).get(MovieListViewModel::class.java)
-    }
 
-    override fun onStart() {
-        super.onStart()
-
-        moviesViewModel.getPopularMoviesList().observe(this, Observer { popularMoviesList ->
-
+        val moviesListObserver = Observer<List<MovieSearch>> { popularMoviesList ->
             val movieAdapter = MoviesAdapter(this, popularMoviesList!!)
             val viewManager = LinearLayoutManager(this)
 
@@ -38,7 +34,9 @@ class MainActivity : AppCompatActivity() {
             }
 
             setProgressVisibility(false)
-        })
+        }
+
+        moviesViewModel.popularMoviesList.observe(this, moviesListObserver)
     }
 
     private fun setProgressVisibility(visible: Boolean) {

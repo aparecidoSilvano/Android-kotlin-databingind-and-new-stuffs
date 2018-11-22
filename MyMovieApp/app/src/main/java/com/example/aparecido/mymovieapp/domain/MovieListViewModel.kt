@@ -8,13 +8,10 @@ import com.example.aparecido.mymovieapp.domain.repository.MoviesRepository
 class MovieListViewModel : ViewModel() {
     private val moviesRepository: MoviesRepository =
         MoviesRepository()
-    private var popularMoviesList: LiveData<List<MovieSearch>>
+
+    val popularMoviesList: LiveData<List<MovieSearch>>
 
     init {
         popularMoviesList = moviesRepository.getPopularMoviesList()
-    }
-
-    fun getPopularMoviesList(): LiveData<List<MovieSearch>> {
-        return popularMoviesList
     }
 }
