@@ -25,13 +25,13 @@ class MainActivity : AppCompatActivity() {
         moviesViewModel = ViewModelProviders.of(this).get(MovieListViewModel::class.java)
 
         val moviesListObserver = Observer<List<MovieSearch>> { popularMoviesList ->
-            val movieAdapter = MoviesAdapter(this, popularMoviesList!!)
+            /*val movieAdapter = MoviesAdapter(this, popularMoviesList!!)
             val viewManager = LinearLayoutManager(this)
 
             moviesList.apply {
                 layoutManager = viewManager
                 adapter = movieAdapter
-            }
+            }*/
 
             setProgressVisibility(false)
         }
