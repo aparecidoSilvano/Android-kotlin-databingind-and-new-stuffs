@@ -5,9 +5,9 @@ import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.widget.Toast
-import com.example.aparecido.mymovieapp.domain.MovieListViewModel
+import android.view.View
 import com.example.aparecido.mymovieapp.R
+import com.example.aparecido.mymovieapp.domain.MovieListViewModel
 import com.example.aparecido.mymovieapp.presentation.adapter.MoviesAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        setProgressVisibility(savedInstanceState == null)
 
         moviesViewModel = ViewModelProviders.of(this).get(MovieListViewModel::class.java)
     }
@@ -35,7 +37,17 @@ class MainActivity : AppCompatActivity() {
                 adapter = movieAdapter
             }
 
-            Toast.makeText(this, "Atualizar a lista, pois chegaram os dados dos filmes", Toast.LENGTH_SHORT).show()
+            setProgressVisibility(false)
         })
+    }
+
+    private fun setProgressVisibility(visible: Boolean) {
+        var visibility = View.INVISIBLE
+
+        if (visible) {
+            visibility = View.VISIBLE
+        }
+
+        progressBar.visibility = visibility
     }
 }
