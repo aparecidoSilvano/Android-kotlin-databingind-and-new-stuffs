@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CCC543"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Activity Content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/expandible_view_container"
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="#FFF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/view_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#d71a9e"
+            android:padding="30dp"
+            android:visibility="gone"
+            android:text="View Content"
+            android:textColor="#FFF" />
+
+        <ImageButton
+            android:id="@+id/bt_expand_layout"
+            android:layout_width="35dp"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:background="@null"
+            android:onClick="expandFragment"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            app:srcCompat="@drawable/ic_expand_fragment" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
